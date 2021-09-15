@@ -5,9 +5,9 @@ import pprint
 res = requests.get("https://news.ycombinator.com/news")
 soup = BeautifulSoup(res.text, "html.parser")
 
-links = soup.select(".storylink")
-votes = soup.select(".score")
-subtext = soup.select(".subtext")
+links = soup.select(".storylink")  # selects and compiles all instances which has html class of 'storylink' in a list 
+votes = soup.select(".score")  # selects and compiles all instances which has html class of 'score' in a list
+subtext = soup.select(".subtext")  # same as the other two
 
 # print(links[0])
 # print(links[0].get("href"))  # value of href
