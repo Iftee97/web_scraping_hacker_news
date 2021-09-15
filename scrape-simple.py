@@ -7,20 +7,15 @@ soup = BeautifulSoup(res.text, "html.parser")
 
 links = soup.select(".storylink")  # selects and compiles all instances which has html class of 'storylink' in a list 
 votes = soup.select(".score")  # selects and compiles all instances which has html class of 'score' in a list
-subtext = soup.select(".subtext")  # same as the other two
+subtext = soup.select(".subtext")  # same as the above two cases
 
 # print(links[0])
-# print(links[0].get("href"))  # value of href
 # print(links[0].getText())  # text within the tags
+# print(links[0].get("href"))  # value of href
 
-# titles = []
-# hrefs = []
-# for stuff in links:
-#     titles.append(stuff.getText())
-#     hrefs.append((stuff.get("href")))
-#
-# new_stuff = list(zip(titles, hrefs))
-# print(new_stuff)
+# article_tag = soup.find(name="a", class_="storylink")  # return the first 'a' tag which has an html class 'storylink'
+# article_text = article_tag.getText()  # text within the tags
+# article_link = article_tag.get("href")  # value of href
 
 
 def sort_stories_by_votes(hacker_news_list):
