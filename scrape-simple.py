@@ -17,6 +17,8 @@ subtext = soup.select(".subtext")  # same as the above two cases
 # article_text = article_tag.getText()  # text within the tags
 # article_link = article_tag.get("href")  # value of href
 
+# article_tags = soup.find_all(name="a", class_="storylink")  # returns all the instances where the tag is 'a' and has an html class of 'storylink' in a list
+# links = soup.select(".storylink")  # does the same as above
 
 def sort_stories_by_votes(hacker_news_list):
     # return sorted(hacker_news_list, key=lambda k: k["votes"]) # sorts in ascending order
